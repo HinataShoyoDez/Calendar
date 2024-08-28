@@ -1,0 +1,22 @@
+﻿<Window x:Class="Calendars.EditReminder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calendars"
+        mc:Ignorable="d"
+        Title="EditReminder" Height="450" Width="800">
+    <StackPanel>
+        
+        <Calendar x:Name="calendar" Margin="10" SelectedDatesChanged="Calendar_SelectedDateChanged"/>
+
+       
+        <TextBox x:Name="txtMessage" Margin="10" Text="{Binding message, UpdateSourceTrigger=PropertyChanged}"/>
+
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Save" Margin="5" Click="BtnSave_Click"/>
+            <Button Content="Cancel" Margin="5" Click="BtnCancel_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
